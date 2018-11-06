@@ -12,7 +12,7 @@
 
   var database = firebase.database();
 
-  var employeeName = "";
+  var name = "";
   var role = "";
   var startDate = "";
   var monthsWorked = 0;
@@ -21,3 +21,14 @@
 
   database.ref().on("value", function(snapshot) {
 
+    if (snapshot.child("name").exists() && snapshot.child("role").exists() && snapshot.child("startdate").exists() && snapshot.child("monthlyrate").exists()) {
+        name = snapshot.val().name;
+        role = snapshot.val().role;
+        startDate = snapshot.val().startDate;
+        monthlyRate = parseInt(snapshot.val().monthlyRate)
+
+        console.log(name);
+        console.log(role);
+        console.log(startDate);
+        console.log(monthlyRate);
+       
