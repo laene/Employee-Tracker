@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel= "shortcut icon" href="./images/favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
@@ -20,35 +20,45 @@
                 <p class="lead">Employees in this company.</p>
             </div>
         </div>
-    <!--New container that hols the 2nd row for the stat colums-->
-        <div class="main-content">
-            <div class="col-md-2 name">
-                <h5>NAME</h5>
-                <h5 id="theirName"></h5>             
-            </div>
-            <div class="col-md-2 role">
-                <h5>ROLE</h5>
-                <h5 id="theirRole"></h5>             
-            </div>
-            <div class="col-md-2 start-date">
-                <h5>START DATE</h5>
-                <h5 id="startDate"></h5>             
-            </div>
-            <div class="col-md-2 months">
-                <h5>MONTHS WORKED</h5>
-                <h5 id="monthsWorked"></h5>             
-            </div>
-            <div class="col-md-2 monthly-rate">
-                <h5>MONTHLY RATE</h5>
-                <h5 id="monthly-rate"></h5>             
-            </div>
-            <div class="col-md-2 total-billed">
-                <h5>TOTAL BILLED</h5>
-                <h5 id="totalBilled"></h5>             
-            </div>
-        </div>
-        
-
+    <!--New container that holds the 2nd row for the stat colums-->
+    <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">NAME</th>
+                <th scope="col">ROLE</th>
+                <th scope="col">START DATE</th>
+                <th scope="col">MONTHS WORKED</th>
+                <th scope="col">MONTHLY RATE</th>
+                <th scope="col">TOTAL BILLED</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>ANNIE NGO</td>
+                <td>SUPERSTAR</td>
+                <td>11-6-18</td>
+                <td>0</td>
+                <td>blah</td>
+              </tr>
+              <tr>
+                <td>blah</td>
+                <td>blah</td>
+                <td>11-6-18</td>
+                <td>0</td>
+                <td>blah</td>
+                <td>blah</td>
+              </tr>
+              <tr>
+                <td>blah</td>
+                <td>blah</td>
+                <td>11-6-18</td>
+                <td>0</td>
+                <td>blah</td>
+                <td>blah</td>
+              </tr>
+            </tbody>
+          </table>
    
 </body>
 </html>
