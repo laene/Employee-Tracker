@@ -18,7 +18,9 @@
   var monthsWorked = 0;
   var monthlyRate = 0;
   var totalBilled = 0;
-
+  
+  // At the initial load and subsequent value changes, get a snapshot of the stored data.
+// This function allows you to update your page in real-time when the firebase database changes.
   database.ref().on("value", function(snapshot) {
 
     if (snapshot.child("name").exists() && snapshot.child("role").exists() && snapshot.child("startdate").exists() && snapshot.child("monthlyrate").exists()) {
@@ -26,9 +28,42 @@
         role = snapshot.val().role;
         startDate = snapshot.val().startDate;
         monthlyRate = parseInt(snapshot.val().monthlyRate)
+    }
 
+    // If Firebase does not have name, role, etc. values stored, they remain the same as the
+    // values we set when we initialized the variables.
+    // In either case, we want to log the values to console and display them on the page.
         console.log(name);
         console.log(role);
         console.log(startDate);
         console.log(monthlyRate);
-       
+
+        $("name").text(name);
+        $("role").text(role);
+        $("startdate").text(startDate);
+        $("monthlyrate").text(monthlyRate);
+
+    // If any errors are experienced, log them to console.    
+    }, function(errorObject) {
+        console.log(errorObject.code);
+      });
+    
+    // Whenever a user clicks the submit button
+
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+        // Get the input values
+        var name = $("#name").val().trim();
+        var role = $("role").val().trim();
+        var startDate = $("startdate").val().trim();
+        //var monthlyRate = parseInt($("monthlyRate").val().trim());
+        
+        console.log(name);
+        console.log(role);
+        console.log(startDate);
+        console.log(monthlyRate);
+
+    });
+    
+
+
