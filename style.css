@@ -4,3 +4,12 @@
     background: rgb(139, 120, 207);
     text-align: center;   
 }
+
+.btn {
+    background: rgb(139, 120, 207);
+    border-color: black solid;
+}
+
+.btn:hover {
+    background: rgb(red, green, blue);
+}
