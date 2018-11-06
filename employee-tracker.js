@@ -54,15 +54,15 @@
         event.preventDefault();
         // Get the input values
         var name = $("#name").val().trim();
-        var role = $("role").val().trim();
-        var startDate = $("startdate").val().trim();
+        var role = $("#role").val().trim();
+        var startDate = $("#startdate").val().trim();
         //var monthlyRate = parseInt($("monthlyRate").val().trim());
         
         console.log(name);
         console.log(role);
         console.log(startDate);
         console.log(monthlyRate);
-
+//small change to test git skills
     });
     
 
