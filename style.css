@@ -1,0 +1,6 @@
+.jumbotron {           /* to style the title*/
+    font-size: 43px;
+    border: solid 5px ;    
+    background: rgb(139, 120, 207);
+    text-align: center;   
+}
