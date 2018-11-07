@@ -23,7 +23,11 @@
 // This function allows you to update your page in real-time when the firebase database changes.
   database.ref().on("value", function(snapshot) {
 
+<<<<<<< HEAD
     if (snapshot.child("inputName").exists() && snapshot.child("inputRole").exists() && snapshot.child("inputStartDate").exists() && snapshot.child("monthlyRate").exists()) {
+=======
+    if (snapshot.child("name").exists() && snapshot.child("role").exists() && snapshot.child("startDate").exists() && snapshot.child("monthlyRate").exists()) {
+>>>>>>> alex
         name = snapshot.val().name;
         role = snapshot.val().role;
         startDate = snapshot.val().startDate;
@@ -38,10 +42,17 @@
         console.log(startDate);
         console.log(monthlyRate);
 
+<<<<<<< HEAD
         $("inputName").text(name);
         $("inputRole").text(role);
         $("inputStartDate").text(startDate);
         $("monthlyRate").text(monthlyRate);
+=======
+        $("#inputName").text(name);
+        $("#inputRole").text(role);
+        $("#inputStartDate").text(startDate);
+        $("#monthlyRate").text(monthlyRate);
+>>>>>>> alex
 
     // If any errors are experienced, log them to console.    
     }, function(errorObject) {
