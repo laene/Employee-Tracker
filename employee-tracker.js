@@ -55,7 +55,7 @@
     $("#submit").on("click", function(event) {
         event.preventDefault();
         // Get the input values
-        var name = $("#inputnName").val().trim();
+        var name = $("#inputName").val().trim();
         var role = $("#inputRole").val().trim();
         var startDate = $("#inputStartDate").val().trim();
         var monthlyRate = parseInt($("#monthlyRate").val().trim());
