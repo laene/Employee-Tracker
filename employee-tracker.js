@@ -23,11 +23,11 @@
 // This function allows you to update your page in real-time when the firebase database changes.
   database.ref().on("value", function(snapshot) {
 
-    if (snapshot.child("name").exists() && snapshot.child("role").exists() && snapshot.child("startdate").exists() && snapshot.child("monthlyrate").exists()) {
+    if (snapshot.child("inputName").exists() && snapshot.child("inputRole").exists() && snapshot.child("inputStartDate").exists() && snapshot.child("monthlyRate").exists()) {
         name = snapshot.val().name;
         role = snapshot.val().role;
         startDate = snapshot.val().startDate;
-        monthlyRate = parseInt(snapshot.val().monthlyRate)
+        monthlyRate = parseInt(snapshot.val().monthlyRate);
     }
 
     // If Firebase does not have name, role, etc. values stored, they remain the same as the
@@ -38,10 +38,10 @@
         console.log(startDate);
         console.log(monthlyRate);
 
-        $("name").text(name);
-        $("role").text(role);
-        $("startdate").text(startDate);
-        $("monthlyrate").text(monthlyRate);
+        $("inputName").text(name);
+        $("inputRole").text(role);
+        $("inputStartDate").text(startDate);
+        $("monthlyRate").text(monthlyRate);
 
     // If any errors are experienced, log them to console.    
     }, function(errorObject) {
@@ -53,16 +53,16 @@
     $("#submit").on("click", function(event) {
         event.preventDefault();
         // Get the input values
-        var name = $("#name").val().trim();
-        var role = $("#role").val().trim();
-        var startDate = $("#startdate").val().trim();
-        //var monthlyRate = parseInt($("monthlyRate").val().trim());
+        var name = $("#inputnName").val().trim();
+        var role = $("#inputRole").val().trim();
+        var startDate = $("#inputStartDate").val().trim();
+        var monthlyRate = parseInt($("#monthlyRate").val().trim());
         
         console.log(name);
         console.log(role);
         console.log(startDate);
         console.log(monthlyRate);
-//small change to test git skills
+
     });
     
 
